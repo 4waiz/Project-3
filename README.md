@@ -1,10 +1,5 @@
-I'm thrilled to introduce my latest creation - a currency converter app crafted with HTML, CSS, and JavaScript. This user-friendly tool allows you to input a currency amount, choose the desired currency for conversion, and receive the instant result in your preferred currency with just one click.
+I developed "Tech Support Hub," a professional and responsive website for an IT support service provider. This project was built using HTML, CSS, and JavaScript, with a major focus on user experience (UX). I prioritized creating an intuitive, seamless, and easy-to-navigate interface, ensuring that users could quickly find the information they need and contact the support team without hassle.
 
-📊 Features:
+The website highlights key services such as Virus & Malware Removal, Network Setup, Data Backup & Recovery, Hardware Repair, and Cloud Solutions. The clean design features animated transitions, smooth navigation, and structured content sections to provide an engaging and efficient user experience.
 
-Enter your currency amount in the "Amount" field.
-Select your desired currency for conversion.
-Click the "Convert" button.
-Voilà! The converted currency amount is displayed in your preferred currency in the "Result" field.
-
-Building this app was an enjoyable experience, showcasing the seamless integration of HTML, CSS, and JavaScript to deliver a practical and intuitive solution for currency conversions.
+By focusing on usability and responsiveness, this project showcases my ability to create user-friendly websites tailored to business needs.
