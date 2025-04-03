@@ -1,58 +1,696 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ==== css links === --->
-    <link rel="stylesheet" href="styles.css">
-    <!-- ==== box-icons link=== --->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- ==== fontawesome link === --->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Temperature Converter</title>
-  </head>
-  <body>
-  <div class="container">
-    <div class="temperature__converter">
-      <!-- === mobile icons === -->
-      <div class="mobile__section">
-        <p>Awaiz Temperature</p>
-        <div class="mobile__icons">
-          <i class='bx bx-wifi'></i>
-          <i class='bx bx-signal-5' ></i>
-          <i class='bx bxs-battery' ></i>
-        </div>
-      </div>
-      <h2 class="title">Temperature Converter</h2>
+<html lang="en-US">
 
-      <!--- === input field === --->
-      <div class="degree-type">
-        <!--- === For Degree  === --->
-         <div class="degree-field">
-           <label for="degree">Degrees</label>
-           <input type="number" name="degree" id="degree">
-         </div>
-
-         <!--- === for temperature option selection field === --->
-         <div class="temp-field">
-           <label for="temp-type">Type</label>
-           <select  name="temperature" id="temp-type" autocomplete="on">
-             <option value="fahrenheit" id="fahrenheitOp">Fahrenheit</option>
-
-             <option value="kelvin" id="kelvin">Kelvin</option>
-           </select>
-         </div>
-      </div>
-
-      <div class="result">
-        <label>Result</label>
-        <h2 class="celsius-value" id="celsius"></h2>
-      </div>
-      <button id="convert-btn">Convert</button>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <title>Tech Support Hub</title>
+    <meta name="description" content="We are the best in the business of auto repair service, tire replacement, quick oil change, brake fixing, and wheel alignment in Orange City.">
+    <meta name="google-site-verification" content="LO-5rHtXhWSI99_gpJa-b2TiPxebMepmweO16j4DNLc">
+    <meta name="yandex-verification" content="e1ea1afe12609d6b">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/css/preloader.min.css?ver=1.0">
+    <link rel="stylesheet" href="assets/css/fonts.min.css?ver=1.0">
+    <link rel="stylesheet" href="assets/css/main.min.css?ver=1.0" media="all">
+    <link rel="preload" href="assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/webfonts/LatoLatin-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/webfonts/LatoLatin-Regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="carclub">
+<div class="atf-preloader" id="atf-preloader">
+    <div class="atf-status">
+        <div class="atf-lds-roller"><div></div><div></div><div></div><div></div></div>
     </div>
-  </div>
+</div>
+<a class="skip-link screen-reader-text" href="#content" title="Skip to content">Skip to content</a>
 
-  <!-- ==== script tags === --->
-  <script src="script.js"></script>
-  </body>
+<header class="site-header" id="masthead" itemtype="https://schema.org/WPHeader" itemscope="itemscope" itemid="#masthead">
+    <div id="ast-desktop-header" data-toggle-type="dropdown">
+        <div class="ast-main-header-wrap main-header-bar-wrap ">
+            <div class="ast-primary-header-bar ast-primary-header main-header-bar" data-section="section-primary-header-builder">
+                <div class="site-primary-header-wrap ast-builder-grid-row-container ast-container" data-section="section-primary-header-builder">
+                    <div class="ast-builder-grid-row ast-grid-center-col-layout">
+                        <div class="site-header-section ast-flex">
+                            <div class="ast-builder-layout-element ast-flex" data-section="title_tagline">
+                                <div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
+                                    <span class="site-logo-img"><a href="#home" class="custom-logo-link" rel="home" aria-current="page"><img width="180" height="60" src="media/site-logo-180x60.png" class="custom-logo" alt="Car Club, Logo" decoding="async" srcset="media/site-logo-180x60.png 180w, media/site-logo-300x100.png 300w, media/site-logo.png 360w" sizes="(max-width: 180px) 100vw, 180px"></a></span> </div>
+                                <!-- .site-branding -->
+                            </div>
+                            <div class="site-header-primary-section-left-center site-header-section ast-flex ast-grid-left-center-section">
+                            </div>
+                        </div>
+                        <div class="site-header-section ast-flex">
+                            <div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-layout-element" data-section="section-hb-menu-1">
+                                <div class="ast-main-header-bar-alignment">
+                                    <div class="main-header-bar-navigation">
+                                        <nav class="site-navigation ast-flex-grow-1" id="primary-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope">
+                                            <div class="main-navigation ast-inline-flex">
+                                                <ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border stack-on-mobile">
+                                                    <li id="menu-item-878" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-878"><a href="#home" class="menu-link">HOME</a></li>
+                                                    <li id="menu-item-879" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-879"><a href="#about" class="menu-link">ABOUT US</a></li>
+                                                    <li id="menu-item-880" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-880"><a href="#whyus" class="menu-link">OUR SERVICES</a></li>
+                                                    <li id="menu-item-881" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-881"><a href="#testimonial" class="menu-link">TESTIMONIALS</a></li>
+                                                    <li id="menu-item-882" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-882"><a href="#contactus" class="menu-link">CONTACT US</a></li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
+                            <div class="site-header-primary-section-right-center site-header-section ast-flex ast-grid-right-center-section">
+                            </div>
+                            <div class="ast-builder-layout-element ast-flex ast-header-html-1" data-section="section-hb-html-1">
+                                <div class="ast-header-html inner-link-style-">
+                                    <div class="ast-builder-html-element">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ast-desktop-header-content content-align-flex-start ">
+        </div>
+    </div> <!-- Main Header Bar Wrap -->
+    <div id="ast-mobile-header" class="ast-mobile-header-wrap " data-type="dropdown">
+        <div class="ast-main-header-wrap main-header-bar-wrap">
+            <div class="ast-primary-header-bar ast-primary-header main-header-bar site-primary-header-wrap ast-builder-grid-row-layout-default ast-builder-grid-row-tablet-layout-default ast-builder-grid-row-mobile-layout-default" data-section="section-primary-header-builder">
+                <div class="ast-builder-grid-row ast-builder-grid-row-no-center">
+                    <div class="site-header-section ast-flex">
+                        <div class="ast-builder-layout-element ast-flex" data-section="title_tagline">
+                            <div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
+                                <span class="site-logo-img"><a href="#home" class="custom-logo-link" rel="home" aria-current="page"><img width="180" height="60" src="media/site-logo-180x60.png" class="custom-logo" alt="Car Club, Logo" decoding="async" srcset="media/site-logo-180x60.png 180w, media/site-logo-300x100.png 300w, media/site-logo.png 360w" sizes="(max-width: 180px) 100vw, 180px"></a></span> </div>
+                            <!-- .site-branding -->
+                        </div>
+                    </div>
+                    <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
+                        <div class="ast-builder-layout-element ast-flex" data-section="section-header-mobile-trigger">
+                            <div class="ast-button-wrap">
+                                <button type="button" class="menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-fill" aria-expanded="false">
+                                    <span class="screen-reader-text">Main Menu</span>
+                                    <span class="mobile-menu-toggle-icon">
+                                        <span class="ahfb-svg-iconset ast-inline-flex svg-baseline"><svg class="ast-mobile-svg ast-menu2-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewbox="0 0 24 28">
+                                                <path d="M24 21v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 13v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1zM24 5v2c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h22c0.547 0 1 0.453 1 1z"></path>
+                                            </svg></span><span class="ahfb-svg-iconset ast-inline-flex svg-baseline"><svg class="ast-mobile-svg ast-close-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+                                                <path d="M5.293 6.707l5.293 5.293-5.293 5.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5.293-5.293 5.293 5.293c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414l-5.293-5.293 5.293-5.293c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path>
+                                            </svg></span> </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ast-mobile-header-content content-align-flex-start ">
+            <div class="ast-builder-menu-mobile ast-builder-menu ast-builder-menu-mobile-focus-item ast-builder-layout-element" data-section="section-header-mobile-menu">
+                <div class="ast-main-header-bar-alignment">
+                    <div class="main-header-bar-navigation">
+                        <nav class="site-navigation ast-flex-grow-1" id="ast-mobile-site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope">
+                            <div class="main-navigation">
+                                <ul id="ast-hf-mobile-menu" class="main-header-menu ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile">
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-878"><a href="#home" class="menu-link">HOME</a></li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-879"><a href="#about" class="menu-link">ABOUT US</a></li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-880"><a href="#whyus" class="menu-link">OUR SERVICES</a></li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-881"><a href="#testimonial" class="menu-link">TESTIMONIALS</a></li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-882"><a href="#contactus" class="menu-link">CONTACT US</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><!-- #masthead -->
+<div id="content" class="site-content">
+    <div class="ast-container">
+        <div id="primary" class="content-area primary">
+            <main id="home" class="site-main">
+                <article class="post-25 page type-page status-publish ast-article-single" id="post-25" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+                    <header class="entry-header ast-no-thumbnail ast-no-title ast-header-without-markup">
+                    </header> <!-- .entry-header -->
+                    <div class="entry-content clear" itemprop="text">
+                        <div data-elementor-type="wp-page" data-elementor-id="25" class="elementor elementor-25">
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-aaca39f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="aaca39f" data-element_type="section" id="header" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-background-overlay"></div>
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-71d8944" data-id="71d8944" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-1832e6d elementor-widget elementor-widget-spacer" data-id="1832e6d" data-element_type="widget" data-widget_type="spacer.default">
+                                                <div class="elementor-widget-container">
+                                                    
+                                                    <div class="elementor-spacer">
+                                                        <div class="elementor-spacer-inner"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-2dcc1f7 elementor-widget elementor-widget-heading" data-id="2dcc1f7" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                 
+                                                    <h1 class="elementor-heading-title elementor-size-default">Tech Support Hub</h1>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-01d3f0a elementor-widget elementor-widget-spacer" data-id="01d3f0a" data-element_type="widget" data-widget_type="spacer.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-spacer">
+                                                        <div class="elementor-spacer-inner"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-1d21258 elementor-widget elementor-widget-heading" data-id="1d21258" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">We are the leading provider of IT support services in the region.</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-749fd53 elementor-view-stacked elementor-position-left elementor-vertical-align-middle elementor-shape-circle elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="749fd53" data-element_type="widget" data-widget_type="icon-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-icon-box-wrapper">
+                                                        <div class="elementor-icon-box-icon">
+                                                            <a class="elementor-icon elementor-animation-grow-rotate" href="tel:+1-123-4567890" alt="call us!">
+                                                                <i aria-hidden="true" class="fas fa-phone"></i></a>
+                                                        </div>
+                                                        <div class="elementor-icon-box-content">
+                                                            <h3 class="elementor-icon-box-title">
+                                                                <a href="tel:+1-123-4567890">
+                                                                    Call Us Today :- </a>
+                                                            </h3>
+                                                            <p class="elementor-icon-box-description">
+                                                                <a style="color:white;" href="tel:+11234567890">+1-123-4567890</a> </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-37000a9 elementor-widget elementor-widget-spacer" data-id="37000a9" data-element_type="widget" data-widget_type="spacer.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-spacer">
+                                                        <div class="elementor-spacer-inner"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-7477d06 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="7477d06" data-element_type="section" id="about">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1011d22" data-id="1011d22" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-48f3005 elementor-widget elementor-widget-heading" data-id="48f3005" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h3 class="elementor-heading-title elementor-size-default">At Tech Support Hub, we provide reliable, efficient, and professional IT support services to help you stay ahead in today's technology-driven world. Whether you are an individual with a simple tech issue or a business needing comprehensive IT support, we are here to provide solutions tailored to your needs. With years of experience in troubleshooting, maintenance, network management, and data security, we are your trusted partner for all things IT.</h3>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-bd8a4bc elementor-widget elementor-widget-spacer" data-id="bd8a4bc" data-element_type="widget" data-widget_type="spacer.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-spacer">
+                                                        <div class="elementor-spacer-inner"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-33f03d8 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="33f03d8" data-element_type="widget" data-widget_type="icon-list.default">
+                                                <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+                                                                <i aria-hidden="true" class="fas fa-shield-alt"></i> </span>
+                                                            <span class="elementor-icon-list-text">Virus & Malware Removal</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+                                                                <i aria-hidden="true" class="fas fa-network-wired"></i> </span>
+                                                            <span class="elementor-icon-list-text">Network Setup & Support</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+                                                                <i aria-hidden="true" class="fas fa-database"></i> </span>
+                                                            <span class="elementor-icon-list-text">Data Backup & Recovery</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+                                                                <i aria-hidden="true" class="fas fa-microchip"></i> </span>
+                                                            <span class="elementor-icon-list-text">Hardware Repair & Upgrade</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+                                                                <i aria-hidden="true" class="fas fa-laptop-code"></i> </span>
+                                                            <span class="elementor-icon-list-text">Software Installation & Troubleshooting</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-58d32b5 elementor-widget elementor-widget-spacer" data-id="58d32b5" data-element_type="widget" data-widget_type="spacer.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-spacer">
+                                                        <div class="elementor-spacer-inner"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-0b5af25 elementor-button-info elementor-align-right elementor-widget elementor-widget-button" data-id="0b5af25" data-element_type="widget" data-widget_type="button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-button-wrapper">
+                                                        <a href="#contactus" class="elementor-button-link elementor-button elementor-size-lg elementor-animation-grow" role="button">
+                                                            <span class="elementor-button-content-wrapper">
+                                                                <span class="elementor-button-icon elementor-align-icon-left">
+                                                                    <i aria-hidden="true" class="fas fa-phone-square-alt"></i> </span>
+                                                                <span class="elementor-button-text">Contact US</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8473521" data-id="8473521" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-6d54efb elementor-widget elementor-widget-heading" data-id="6d54efb" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h4 class="elementor-heading-title elementor-size-default">Let the Numbers Talk</h4>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-f06ee63 elementor-widget__width-initial elementor-widget elementor-widget-counter" data-id="f06ee63" data-element_type="widget" data-widget_type="counter.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-counter">
+                                                        <div class="elementor-counter-number-wrapper">
+                                                            <span class="elementor-counter-number-prefix"></span>
+                                                            <span class="elementor-counter-number">10</span>
+                                                            <span class="elementor-counter-number-suffix">+</span>
+                                                        </div>
+                                                        <div class="elementor-counter-title">Years in Business</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-7dc2ad3 elementor-widget__width-initial elementor-widget elementor-widget-counter" data-id="7dc2ad3" data-element_type="widget" data-widget_type="counter.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-counter">
+                                                        <div class="elementor-counter-number-wrapper">
+                                                            <span class="elementor-counter-number-prefix"></span>
+                                                            <span class="elementor-counter-number">5000</span>
+                                                             <span class="elementor-counter-number-suffix">+</span>
+                                                        </div>
+                                                        <div class="elementor-counter-title">Devices Fixed</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-d8ba9d1 elementor-widget__width-initial elementor-widget elementor-widget-counter" data-id="d8ba9d1" data-element_type="widget" data-widget_type="counter.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-counter">
+                                                        <div class="elementor-counter-number-wrapper">
+                                                            <span class="elementor-counter-number-prefix"></span>
+                                                            <span class="elementor-counter-number">2000</span>
+                                                            <span class="elementor-counter-number-suffix">+</span>
+                                                        </div>
+                                                        <div class="elementor-counter-title">Networks Configured</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-8c345b6 elementor-widget__width-initial elementor-widget elementor-widget-counter" data-id="8c345b6" data-element_type="widget" data-widget_type="counter.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-counter">
+                                                        <div class="elementor-counter-number-wrapper">
+                                                            <span class="elementor-counter-number-prefix"></span>
+                                                            <span class="elementor-counter-number">3000</span>
+                                                            <span class="elementor-counter-number-suffix">+</span>
+                                                        </div>
+                                                        <div class="elementor-counter-title">Customers Served</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-a256a15 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a256a15" data-element_type="section" id="services" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-background-overlay"></div>
+                                <div class="elementor-container elementor-column-gap-no">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9f829bf" data-id="9f829bf" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-27ca45c elementor-widget elementor-widget-heading" data-id="27ca45c" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h4 class="elementor-heading-title elementor-size-default">Why Choose Us</h4>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-4308068 elementor-widget elementor-widget-heading" data-id="4308068" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">OUR SERVICES</h2>
+                                                </div>
+                                            </div>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-242e660 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="242e660" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-no">
+                                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-8375f98" data-id="8375f98" data-element_type="column">
+                                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                                            <div class="elementor-element elementor-element-235dcd4 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-view-stacked elementor-shape-circle elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="235dcd4" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-icon-box-wrapper">
+                                                                        <div class="elementor-icon-box-icon">
+                                                                            <span class="elementor-icon elementor-animation-pulse">
+                                                                                <i aria-hidden="true" class="fas fa-shield-alt"></i> </span>
+                                                                        </div>
+                                                                        <div class="elementor-icon-box-content">
+                                                                            <h3 class="elementor-icon-box-title">
+                                                                                <span>
+                                                                                    Virus & Malware Removal </span>
+                                                                            </h3>
+                                                                            <p class="elementor-icon-box-description">
+                                                                                Quickly remove malicious software from your computer and protect your system from future threats. </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-0181068 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-view-stacked elementor-shape-circle elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="0181068" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-icon-box-wrapper">
+                                                                        <div class="elementor-icon-box-icon">
+                                                                            <span class="elementor-icon elementor-animation-grow-rotate">
+                                                                                <i aria-hidden="true" class="fas fa-network-wired"></i> </span>
+                                                                        </div>
+                                                                        <div class="elementor-icon-box-content">
+                                                                            <h3 class="elementor-icon-box-title">
+                                                                                <span>
+                                                                                    Network Setup & Support </span>
+                                                                            </h3>
+                                                                            <p class="elementor-icon-box-description">
+                                                                                Configure and maintain local area networks (LAN), Wi-Fi, and other connectivity solutions. </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-36bf734 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-view-stacked elementor-shape-circle elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="36bf734" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-icon-box-wrapper">
+                                                                        <div class="elementor-icon-box-icon">
+                                                                            <span class="elementor-icon elementor-animation-hang">
+                                                                                <i aria-hidden="true" class="fas fa-database"></i> </span>
+                                                                        </div>
+                                                                        <div class="elementor-icon-box-content">
+                                                                            <h3 class="elementor-icon-box-title">
+                                                                                <span>
+                                                                                    Data Backup & Recovery </span>
+                                                                            </h3>
+                                                                            <p class="elementor-icon-box-description">
+                                                                                Secure your valuable data with professional backup and ensure recovery after any data loss incidents. </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-6471e9f elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-view-stacked elementor-shape-circle elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="6471e9f" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-icon-box-wrapper">
+                                                                        <div class="elementor-icon-box-icon">
+                                                                            <span class="elementor-icon elementor-animation-wobble-horizontal">
+                                                                                <i aria-hidden="true" class="fas fa-microchip"></i> </span>
+                                                                        </div>
+                                                                        <div class="elementor-icon-box-content">
+                                                                            <h3 class="elementor-icon-box-title">
+                                                                                <span>
+                                                                                    Hardware Repair & Upgrade </span>
+                                                                            </h3>
+                                                                            <p class="elementor-icon-box-description">
+                                                                                Repair malfunctioning hardware or upgrade your systems to improve performance. </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-b3f19d7 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-view-stacked elementor-shape-circle elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="b3f19d7" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-icon-box-wrapper">
+                                                                        <div class="elementor-icon-box-icon">
+                                                                            <span class="elementor-icon elementor-animation-wobble-vertical">
+                                                                                <i aria-hidden="true" class="fas fa-laptop-code"></i> </span>
+                                                                        </div>
+                                                                        <div class="elementor-icon-box-content">
+                                                                            <h3 class="elementor-icon-box-title">
+                                                                                <span>
+                                                                                    Software Installation & Troubleshooting </span>
+                                                                            </h3>
+                                                                            <p class="elementor-icon-box-description">
+                                                                                Help with software installation and fixing common software-related issues on computers and devices. </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-438e390 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-view-stacked elementor-shape-circle elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="438e390" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-icon-box-wrapper">
+                                                                        <div class="elementor-icon-box-icon">
+                                                                            <span class="elementor-icon elementor-animation-buzz">
+                                                                                <i aria-hidden="true" class="fas fa-cloud"></i> </span>
+                                                                        </div>
+                                                                        <div class="elementor-icon-box-content">
+                                                                            <h3 class="elementor-icon-box-title">
+                                                                                <span>
+                                                                                    Cloud Solutions </span>
+                                                                            </h3>
+                                                                            <p class="elementor-icon-box-description">
+                                                                                Set up and manage cloud-based systems for better storage, collaboration, and security. </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-f87e246 elementor-widget elementor-widget-spacer" data-id="f87e246" data-element_type="widget" data-widget_type="spacer.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-spacer">
+                                                                        <div class="elementor-spacer-inner"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-053b652 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="053b652" data-element_type="section" id="testimonial" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-container elementor-column-gap-no">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9d4d7f8" data-id="9d4d7f8" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-59137f2 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-id="59137f2" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Client Testimonials</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-7c359da elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="7c359da" data-element_type="widget" data-widget_type="divider.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-divider">
+                                                        <span class="elementor-divider-separator">
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-4e6f97a elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-testimonial" data-id="4e6f97a" data-element_type="widget" data-widget_type="testimonial.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-testimonial-wrapper">
+                                                        <div class="elementor-testimonial-content">"Tech Support Hub saved the day when my business server crashed. They got me back online in no time and helped set up a more secure network. Highly recommend!"</div>
+                                                        <div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+                                                            <div class="elementor-testimonial-meta-inner">
+                                                                <div class="elementor-testimonial-image">
+                                                                    <img decoding="async" width="60" height="60" src="media\CHICHI-LA-FRIKI.png" class="attachment-full size-full" alt="Fathima">
+                                                                </div>
+                                                                <div class="elementor-testimonial-details">
+                                                                    <span class="elementor-testimonial-name">Fathima </span>
+                                                                    <span class="elementor-testimonial-job">Business Owner</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-1c55011 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-testimonial" data-id="1c55011" data-element_type="widget" data-widget_type="testimonial.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-testimonial-wrapper">
+                                                        <div class="elementor-testimonial-content">"Excellent service! They removed a nasty virus from my laptop and even taught me how to prevent future attacks. Very knowledgeable and friendly!"</div>
+                                                        <div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+                                                            <div class="elementor-testimonial-meta-inner">
+                                                                <div class="elementor-testimonial-image">
+                                                                    <img decoding="async" width="60" height="60" src="media\pyro-laty.png" class="attachment-full size-full" alt="Jane Smith">
+                                                                </div>
+                                                                <div class="elementor-testimonial-details">
+                                                                    <span class="elementor-testimonial-name">Jane Smith</span>
+                                                                    <span class="elementor-testimonial-job">Individual Customer</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-1f11ce2 elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-testimonial" data-id="1f11ce2" data-element_type="widget" data-widget_type="testimonial.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-testimonial-wrapper">
+                                                        <div class="elementor-testimonial-content">"Fast, reliable, and professional. Tech Support Hub helped me upgrade my office network and now everything works flawlessly - we've seen a 40% improvement in connectivity speeds!"</div>
+                                                        <div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
+                                                            <div class="elementor-testimonial-meta-inner">
+                                                                <div class="elementor-testimonial-image">
+                                                                    <img decoding="async" width="60" height="60" src="media\Allie-Kehoe.png" class="attachment-full size-full" alt="Mike Johnson">
+                                                                </div>
+                                                                <div class="elementor-testimonial-details">
+                                                                    <span class="elementor-testimonial-name">Mike Johnson</span>
+                                                                    <span class="elementor-testimonial-job">IT Manager</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-76a20d3 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="76a20d3" data-element_type="section" id="contactus" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-background-overlay"></div>
+                                <div class="elementor-container elementor-column-gap-no">
+                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-989bfaa" data-id="989bfaa" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-d4e142b elementor-widget elementor-widget-heading" data-id="d4e142b" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Contact Us.</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-7bbcae9 elementor-widget elementor-widget-text-editor" data-id="7bbcae9" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <p>If you require any IT support or have questions about our services, please don't hesitate to reach out. Our team is ready to assist you!</p>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-83e7882 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="83e7882" data-element_type="widget" data-widget_type="icon-list.default">
+                                                <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="tel:+11234567890">
+                                                                <span class="elementor-icon-list-icon">
+                                                                    <i aria-hidden="true" class="fas fa-phone-square-alt"></i> </span>
+                                                                <span class="elementor-icon-list-text">+1-123-4567890</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="tel:+19876543210">
+                                                                <span class="elementor-icon-list-icon">
+                                                                    <i aria-hidden="true" class="fas fa-mobile"></i> </span>
+                                                                <span class="elementor-icon-list-text">+1-987-6543210</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="mailto:info@techsupporthub.com">
+                                                                <span class="elementor-icon-list-icon">
+                                                                    <i aria-hidden="true" class="fas fa-mail-bulk"></i> </span>
+                                                                <span class="elementor-icon-list-text">info@techsupporthub.com</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <a href="https://maps.google.com" target="_blank">
+                                                                <span class="elementor-icon-list-icon">
+                                                                    <i aria-hidden="true" class="fas fa-map"></i> </span>
+                                                                <span class="elementor-icon-list-text">123 Tech Lane, Suite 456, City, State, ZIP</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-84255ed elementor-widget elementor-widget-google_maps" data-id="84255ed" data-element_type="widget" data-widget_type="google_maps.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-custom-embed">
+                                                        <iframe 
+                                                        loading="lazy" 
+                                                        width="100%" 
+                                                        height="100%" 
+                                                        src="https://maps.google.com/maps?q=Al+Ain+University+-+Abu+Dhabi+Campus&#038;t=m&#038;z=15&#038;output=embed&#038;iwloc=near&#038;pb=!1m14!1m8!1m3!1d7823.97550736618!2d54.53625381763837!3d24.342997202978793!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e69cd8eb83b6b%3A0x3e1ad8d50f67a52b!2sAl%20Ain%20University%20-%20Abu%20Dhabi%20Campus!5e1!3m2!1sen!2sus!4v1743707139036!5m2!1sen!2sus" 
+                                                        title="Al Ain University - Abu Dhabi Campus" 
+                                                        aria-label="Al Ain University - Abu Dhabi Campus"
+                                                        style="border:0;" 
+                                                        allowfullscreen="" 
+                                                        referrerpolicy="no-referrer-when-downgrade">
+                                                      </iframe>                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ebc19c0" data-id="ebc19c0" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-a9b8258 elementor-widget elementor-widget-wpforms" data-id="a9b8258" data-element_type="widget" data-widget_type="wpforms.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="wpforms-container " id="wpforms-7">
+                                                        <form id="wpforms-form-7" class="wpforms-validate wpforms-form" data-formid="7">
+                                                            <noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript>
+                                                            <div class="wpforms-field-container">
+                                                                <div id="wpforms-7-field_0-container" class="wpforms-field wpforms-field-name" data-field-id="0">
+                                                                    <label class="wpforms-field-label" for="wpforms-7-field_0">Name <span class="wpforms-required-label">*</span></label><input type="text" id="wpforms-7-field_0" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][0]" placeholder="Full name" required>
+                                                                </div>
+                                                                <div id="wpforms-7-field_1-container" class="wpforms-field wpforms-field-email" data-field-id="1">
+                                                                    <label class="wpforms-field-label" for="wpforms-7-field_1">Email <span class="wpforms-required-label">*</span></label><input type="email" id="wpforms-7-field_1" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][1]" placeholder="Email address" required>
+                                                                </div>
+                                                                <div id="wpforms-7-field_7-container" class="wpforms-field wpforms-field-number" data-field-id="7">
+                                                                    <label class="wpforms-field-label" for="wpforms-7-field_7">Contact Number</label><input type="number" id="wpforms-7-field_7" class="wpforms-field-large" name="wpforms[fields][7]" placeholder="Mobile or Landline Number">
+                                                                </div>
+                                                                <div id="wpforms-7-field_3-container" class="wpforms-field wpforms-field-text" data-field-id="3">
+                                                                    <label class="wpforms-field-label" for="wpforms-7-field_3">Device/Issue <span class="wpforms-required-label">*</span></label><input type="text" id="wpforms-7-field_3" class="wpforms-field-large wpforms-field-required" name="wpforms[fields][3]" placeholder="Describe the issue you're facing" required>
+                                                                </div>
+                                                                <div id="wpforms-7-field_2-container" class="wpforms-field wpforms-field-textarea" data-field-id="2">
+                                                                    <label class="wpforms-field-label" for="wpforms-7-field_2">Message <span class="wpforms-required-label">*</span></label><textarea id="wpforms-7-field_2" class="wpforms-field-small wpforms-field-required" name="wpforms[fields][2]" placeholder="Additional Information or Questions" required></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="wpforms-submit-container">
+                                                                <input type="hidden" name="wpforms[id]" value="7"><input type="hidden" name="wpforms[author]" value="1"><input type="hidden" name="wpforms[post_id]" value="25"><button type="submit" name="wpforms[submit]" id="wpforms-submit-7" class="wpforms-submit quote-button-class" data-alt-text="Sending..." data-submit-text="Send us an E-Mail" aria-live="assertive" value="wpforms-submit"><i aria-hidden="true" class="fas fa-mail-bulk"></i> Send us an E-Mail</button>
+                                                            </div>
+                                                        </form>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-top-section elementor-element elementor-element-3a9943b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3a9943b" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8f1b8ab" data-id="8f1b8ab" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-41c12c1 elementor-widget elementor-widget-html" data-id="41c12c1" data-element_type="widget" data-widget_type="html.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="go-top"><a class="fas fa-arrow-circle-up top" href="#home" alt="go back to top"></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div> 
+</div>
+<footer class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
+    <div class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-2-equal ast-builder-grid-row-tablet-2-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-below-footer-builder">
+        <div class="ast-builder-grid-row-container-inner">
+            <div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row">
+                <div class="site-footer-below-section-1 site-footer-section site-footer-section-1">
+                    <div class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright" data-section="section-footer-builder">
+                        <div class="ast-footer-copyright">
+                            <p>Copyright &copy; <span id="year">2025</span> Tech Support Hub</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-footer-below-section-2 site-footer-section site-footer-section-2">
+                    <div class="footer-widget-area widget-area site-footer-focus-item ast-footer-html-2" data-section="section-fb-html-2">
+                        <div class="ast-header-html inner-link-style-">
+                            <div class="ast-builder-html-element">
+                                <p>Designed by <a style="color: #fff; text-decoration: underline;" href="https://www.linkedin.com/in/awaiz-ahmed/">Awaiz</a></p>
+                                <div class="go-top"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/frontend.min.js?ver=1.0"></script>
+<script src="assets/js/main.min.js?ver=1.0"></script>
+</body>
 </html>
